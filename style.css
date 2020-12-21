@@ -1,19 +1,28 @@
 
 :root {
     /* colors */
-    --header-n-footer-bg-color: #00ffc7;
-    /*--header-n-footer-bg-color: #50efa3;*/
+    --header-n-footer-bg-color: #00ffc8;
     --first-bg-color: #000000;
     --second-bg-color: #fafafa;
-    --third-bg-color: #dfdfdf;
+    --third-bg-color: #eeeeee;
+
+    --header-n-footer-text-color: #00c096;
 
     /* sizes */
     --block-content-width: 90%;
-    --block-content-height: 500px;
+    --block-content-height: 800px;
 
-    --header-n-footer-width: 100%;
+    --header-n-footer-width: 95%;
     --header-n-footer-height: 100px;
+    --header-title-margin-left: 5%;
+    --header-anchors-width: 55%;
 
+    --footer-margin-left: 5%;
+
+    --block-about-me-image-block-size: 30%;
+
+    /* fonts */
+    --header-n-footer-font-family: sans-serif;
 
 }
 
@@ -50,4 +59,64 @@ header, footer {
 
 header {
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text {
+    font-family: var(--header-n-footer-font-family);
+    color: var(--header-n-footer-text-color);
+}
+
+.header-title {
+    margin-left: var(--header-title-margin-left);
+}
+
+.header-anchors {
+    width: var(--header-anchors-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header-anchor-text {
+    color: var(--header-n-footer-text-color);
+    font-family: var(--header-n-footer-font-family);
+}
+
+.header-anchor-link {
+    color: var(--header-n-footer-text-color);
+    text-decoration: none;
+}
+
+footer {
+    margin-left: var(--footer-margin-left);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block-about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.block-about-me-image {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--header-n-footer-bg-color);
+    width: var(--block-about-me-image-block-size);
+}
+
+.block-about-me-text {
+
+}
+
+.group-logo-image {
+    width: 50%;
 }
